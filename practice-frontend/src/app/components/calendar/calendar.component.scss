@@ -1,0 +1,14 @@
+.month{
+
+    &__content{
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        margin-bottom: 10px;
+
+    
+    }
+
+
+
+
+}

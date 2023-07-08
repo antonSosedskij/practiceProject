@@ -1,0 +1,10 @@
+<div class="container pt-3 px-6 flex justify-content-between">
+    <div class="container__notes flex flex-column w-4">
+        <div class="note" *ngFor="let note of notes">
+            <p>{{ note.description }}</p>
+            <input type="checkbox" name="" id="">
+        </div>
+    </div>
+    <app-calendar></app-calendar>
+</div>
+

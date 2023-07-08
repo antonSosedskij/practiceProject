@@ -1,0 +1,19 @@
+.container{
+
+
+    &__notes{
+
+    }
+
+}
+
+.note{
+    display: flex;
+
+    padding: 5px 20px;
+
+    border: 1px solid #b2b2b2;
+    border-radius: 5px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.25);
+    margin: 5px;
+}

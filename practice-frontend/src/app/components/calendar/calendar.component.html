@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="calendar">
+        <div class="month">
+            <div class="month__name">
+                <i></i>
+                <span>{{this.monthName}}</span>
+                <i></i>
+            </div>
+            <div class="month__content">
+                <div class="week flex" *ngFor="let week of daysOfWeek">
+                    {{week}}
+                </div>
+                <div class="day p-3" *ngFor="let day of calendarDates">
+                    {{day}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
