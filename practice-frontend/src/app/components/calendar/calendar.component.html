@@ -1,10 +1,11 @@
 <div class="container">
-    <div class="calendar">
+    <div class="calendar px-2" >
         <div class="month">
-            <div class="month__name">
-                <i></i>
-                <span>{{this.monthName}}</span>
-                <i></i>
+            <div class="month__name flex justify-content-center p-2">
+                <i (click)="previousMonth()" class="pi pi-arrow-left mr-2"></i>
+                <span class="mr-2">{{this.monthName}}</span>
+                <span>{{this.currentYear}}</span>
+                <i (click)="nextMonth()" class="pi pi-arrow-right ml-2"></i>
             </div>
             <div class="month__content">
                 <div class="week flex" *ngFor="let week of daysOfWeek">

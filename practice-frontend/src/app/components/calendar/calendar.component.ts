@@ -21,7 +21,7 @@ export class CalendarComponent {
   constructor() {
     const currentDate = new Date();
     this.currentYear = currentDate.getFullYear();
-    this.currentMonth = 1;
+    this.currentMonth = currentDate.getMonth();
     this.updateCalendarDates();
   }
 
@@ -33,6 +33,7 @@ export class CalendarComponent {
       this.currentYear--;
     }
     this.updateCalendarDates();
+    this.updateMonthName(); 
   }
 
   nextMonth() {
@@ -42,6 +43,7 @@ export class CalendarComponent {
       this.currentYear++;
     }
     this.updateCalendarDates();
+    this.updateMonthName(); 
   }
 
   updateCalendarDates():void {
@@ -70,8 +72,24 @@ export class CalendarComponent {
   
     this.calendarDates = calendarDates;
   }
-  
-  
+
+  updateMonthName(): void {
+    const monthNames = [
+      "Январь",
+      "Февраль",
+      "Март",
+      "Апрель",
+      "Май",
+      "Июнь",
+      "Июль",
+      "Август",
+      "Сентябрь",
+      "Откябрь",
+      "Ноябрь",
+      "Декабрь"
+    ];
+    this.monthName = monthNames[this.currentMonth];
+  }
   
 
 }
