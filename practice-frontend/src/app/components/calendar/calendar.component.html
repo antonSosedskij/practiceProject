@@ -11,7 +11,7 @@
                 <div class="week flex" *ngFor="let week of daysOfWeek">
                     {{week}}
                 </div>
-                <div class="day p-3" *ngFor="let day of calendarDates">
+                <div (click)="onDateClick(day)" [ngClass]="{ 'current-month' : isCurrentMonth(day) }" class="day p-3" *ngFor="let day of calendarDates">
                     {{day}}
                 </div>
             </div>

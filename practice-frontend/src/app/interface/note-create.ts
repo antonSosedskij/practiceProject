@@ -1,5 +1,4 @@
-export interface Note {
-    note_id: number,
+export interface NoteCreate {
     description: string,
     is_done: boolean,
     creationDate: Date

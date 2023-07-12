@@ -1,10 +1,13 @@
 <div class="container pt-3 px-6 flex justify-content-between">
-    <div class="container__notes flex flex-column w-4">
-        <div class="note" *ngFor="let note of notes">
-            <p>{{ note.description }}</p>
-            <input type="checkbox" name="" id="">
+    <div class="container__notes flex flex-column w-6">
+        <div class="note flex align-items-center" *ngFor="let note of notes">
+            <p [ngClass]="{completed : note.is_done}">{{ note.description }}</p>
+            <input [checked]="note.is_done" type="checkbox" (click)="completeNote(note.note_id)">
+            <i class="pi pi-trash ml-1" (click)="deleteNote(note.note_id)"></i>
         </div>
+        <app-notes-create class="mt-1 mx-1"></app-notes-create>
     </div>
-    <app-calendar></app-calendar>
+    
+    <app-calendar (dataEvent)="receiveNotes($event)"></app-calendar>
 </div>
 

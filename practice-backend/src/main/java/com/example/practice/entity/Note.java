@@ -4,6 +4,8 @@ package com.example.practice.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.sql.Date;
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -21,4 +23,7 @@ public class Note {
 
     @Column(name = "is_done", nullable = false)
     public boolean is_done;
+
+    @Column(name = "creation_date", nullable = false)
+    public Date creationDate;
 }
